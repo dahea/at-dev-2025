@@ -1,0 +1,47 @@
+title: Project
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: media
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: Media
+              folder: projects
+              validate:
+                - required
+          -
+            handle: technologies
+            field:
+              type: text
+              display: Technologies
+              validate:
+                - required
+          -
+            handle: live_link
+            field:
+              type: link
+              display: 'Live Link'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
