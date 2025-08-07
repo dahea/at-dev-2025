@@ -1,6 +1,7 @@
 title: Page
 tabs:
   main:
+    display: Main
     sections:
       -
         fields:
@@ -9,6 +10,8 @@ tabs:
             field:
               type: text
               required: true
+              validate:
+                - required
           -
             handle: content
             field:
@@ -16,20 +19,39 @@ tabs:
               display: Content
               localizable: true
           -
-            handle: author
-            field:
-              type: users
-              display: Author
-              default: current
-              localizable: true
-              max_items: 1
-          -
             handle: template
             field:
               type: template
               display: Template
               localizable: true
+          -
+            handle: links
+            field:
+              type: replicator
+              display: Links
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: icon
+                          field:
+                            directory: resources/assets/icons
+                            type: icon
+                            display: Icon
+                            width: 25
+                        -
+                          handle: link
+                          field:
+                            container: assets
+                            type: link
+                            display: Link
+                            width: 75
   sidebar:
+    display: Sidebar
     sections:
       -
         fields:

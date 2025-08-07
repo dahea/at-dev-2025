@@ -22,6 +22,13 @@ tabs:
               folder: projects
               validate:
                 - required
+              width: 66
+          -
+            handle: disable_media_scroll
+            field:
+              type: toggle
+              display: 'Disable Media Scroll'
+              width: 33
           -
             handle: technologies
             field:
@@ -45,3 +52,12 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - projects
+              max_items: 1
+              listable: false
+              localizable: true
