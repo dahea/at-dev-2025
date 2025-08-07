@@ -37,6 +37,11 @@ tabs:
               validate:
                 - required
           -
+            handle: note
+            field:
+              type: text
+              display: Note
+          -
             handle: live_link
             field:
               type: link

@@ -29,6 +29,9 @@
                     <div class="details">
                         <div class="title">{{ title }}</div>
                         <div class="tech">{{ technologies }}</div>
+                        {{ if note }}
+                        <div class="note">{{ note }}</div>
+                        {{ /if }}
                         {{ if live_link }}
                         <a href="{{ live_link.url }}" target="_blank">View Live Site</a>
                         {{ /if }}
