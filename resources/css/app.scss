@@ -3,14 +3,13 @@
 $teal: #006d77;
 $foam: #83c5be;
 $blue: #edf6f9;
-$coral: #ffddd2;
 $tan: #e29578;
 
 
 @mixin  sora {
   font-family: "Sora", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -33,6 +32,7 @@ body {
     h1, h2, h3 {
         line-height: 1;
         margin: 0;
+        @include sora();
     }
 }
 
@@ -152,13 +152,16 @@ body {
 
     .title {
         @include sora();
-        font-weight: 600;
         font-size: 1rem;
     }
     
     .tech {
         font-size: .9rem;
+    }
 
+    .note {
+        font-size: .75rem;
+        color: color.change($teal, $alpha: 0.7);
     }
 
     a {
@@ -170,4 +173,10 @@ body {
             color: $teal;
         }
     }
+}
+
+footer {
+    font-size: .75rem;
+    background: $teal;
+    color: $foam;
 }
