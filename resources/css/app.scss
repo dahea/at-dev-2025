@@ -1,0 +1,173 @@
+@use 'sass:color';
+
+$teal: #006d77;
+$foam: #83c5be;
+$blue: #edf6f9;
+$coral: #ffddd2;
+$tan: #e29578;
+
+
+@mixin  sora {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin geist {
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body {
+    background: $blue;
+    color: $teal;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    @include geist();
+
+    h1, h2, h3 {
+        line-height: 1;
+        margin: 0;
+    }
+}
+
+.wrapper {
+    padding: 24px 12px;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    @media screen and (min-width: 768px) {
+        padding: 36px;
+    }
+
+    a {
+        display: inline-block;
+        transition: all ease 0.2s;
+        text-decoration: none;
+        font-size: .75rem;
+
+    }
+}
+
+#about {
+
+    background: color.change($foam, $alpha: 0.25);
+
+    .wrapper {
+
+        @media screen and (min-width: 768px) {
+            > * {
+                max-width: 66vw;
+            }
+        }
+        
+    }
+
+    .links {
+        display: inline-flex;
+        gap: 12px;
+        margin-top: 1rem;
+
+        a {
+            color: $teal;
+            padding: 9px;
+            border-radius: 100%;
+            line-height: 1;
+            border: 1px dashed transparent;
+
+            &:hover {
+                color: $teal;
+                border-color: $tan;
+            }
+        }
+
+        svg {
+            width: 21px;
+            height: 21px;
+            display: block;
+        }
+    }
+
+}
+
+#projects {
+
+    #projects-grid {
+        display: grid;
+        gap: 12px;
+        margin-block: 24px;
+    
+        @media screen and (min-width: 768px) {
+            gap: 24px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .project {
+        border-radius: 6px;
+        overflow: hidden;
+        border: 1px solid $foam;
+        background-color: #ffffff;
+
+        &:not(.disable-scroll) {
+            
+            &:hover {
+                .media {
+                    img {
+                        transform: translateY(-200px);
+                    }
+                }
+            }
+
+        }
+    }
+
+    .media {
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
+        background-color: $foam;
+        position: relative;
+        border-bottom: 1px solid $blue;
+        img, video {
+            width: 100%;
+            height: inherit;
+            position: absolute;
+            top: 0;
+            transition: all ease 3s;
+        }
+    }
+
+    .details {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .title {
+        @include sora();
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    
+    .tech {
+        font-size: .9rem;
+
+    }
+
+    a {
+        border-bottom: 1px dashed $foam;
+        color: color.change($teal, $alpha: 0.7);
+
+        &:hover {
+            border-color: $tan;
+            color: $teal;
+        }
+    }
+}

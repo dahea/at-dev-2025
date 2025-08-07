@@ -1,16 +1,39 @@
 ---
-title: Home
 id: home
-template: home
 blueprint: pages
+title: Home
+template: home
+author: 95b9e28e-cca9-4bf5-83bd-f0226261de8b
+updated_by: 95b9e28e-cca9-4bf5-83bd-f0226261de8b
+updated_at: 1754533531
+links:
+  -
+    id: me0qavlf
+    link: 'https://github.com/dahea'
+    type: new_set
+    enabled: true
+    icon: github
+  -
+    id: me0qa43l
+    link: 'https://linkedin.com/in/dahea'
+    type: new_set
+    enabled: true
+    icon: linkedin-in
+  -
+    id: me0qb4dc
+    link: 'mailto:dahea.an@gmail.com'
+    type: new_set
+    enabled: true
+    icon: at
+  -
+    id: me0qbd6a
+    link: 'asset::assets::da-r-2025.pdf'
+    type: new_set
+    enabled: true
+    icon: file-arrow-down
 ---
-## Welcome to your brand new Statamic site!
+# Da-Hea An
 
-Not sure what to do next? Here are a few ideas, but feel free to explore in your own way, in your own time.
+Front-end developer with a decade of experience in the boutique web development sector with a passion for collaborating with designers and product managers.
 
-- [Jump into the Control Panel](/cp) and edit this page or begin setting up your own collections and blueprints.
-- [Head to the docs](https://statamic.dev) and learn how Statamic works.
-- [Watch some Statamic videos](https://youtube.com/statamic) on YouTube.
-- [Join our Discord chat](https://statamic.com/discord) and meet thousands of other Statamic developers.
-- [Start a discussion](https://github.com/statamic/cms/discussions) and get answers to your questions.
-- [Star Statamic on Github](https://github.com/statamic/cms) if you enjoy using it!
+Happily living at the front of the stack in the land of CSS, HTML, and Javascript.
